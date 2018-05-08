@@ -26,6 +26,9 @@ public class FormNuevosTrabajadoresServlet extends HttpServlet {
 		//ProyectoDAOImplementation.getInstance().createProyecto(proyecto);
 		
 		resp.sendRedirect(req.getContextPath()+"/FormNuevosTrabajadores.jsp");
+		
+		
+		
 
 		
 	}

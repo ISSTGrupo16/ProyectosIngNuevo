@@ -13,19 +13,20 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Gestor implements Serializable {
+public class Trabajador implements Serializable {
 
 	@Id
 	private String email;
 	private String password;
 	private String name;
+	private String especialidad;
 
 	
-	@OneToMany(mappedBy = "advisor", fetch = FetchType.EAGER)
-	private List <Proyecto> advisedProyectos;
+	@OneToMany
+	private List <Trabajador> trabajadores;
 	
-	public Gestor() {
-		this.advisedProyectos = new ArrayList<>();
+	public Trabajador() {
+		this.trabajadores = new ArrayList<>();
 	}
 
 	public String getEmail() {
@@ -52,13 +53,20 @@ public class Gestor implements Serializable {
 		this.name = name;
 	}
 
-	public List<Proyecto> getAdvisedProyectos() {
-		return advisedProyectos;
+	public List <Trabajador> getTrabajador() {
+		return trabajadores;
 	}
 
-	public void setAdvisedProyectos(List<Proyecto> advisedProyectos) {
-		this.advisedProyectos = advisedProyectos;
+	public void setTrabajador(List <Trabajador> trabajadores) {
+		this.trabajadores = trabajadores;
 	}
+	
+	public String getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}	
 }
-
 

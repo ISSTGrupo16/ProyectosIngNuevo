@@ -1,4 +1,4 @@
-<form action="FormNuevoGestorSecServlet">
+<form action="FormNuevoGestorServlet">
 
 <input type="text" name="email" placeholder="Email" />
 <input type="text" name="name" placeholder="Nombre completo" />

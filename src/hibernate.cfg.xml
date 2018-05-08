@@ -17,5 +17,6 @@
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="es.upm.dit.isst.webLab.dao.model.Proyecto" />
 		<mapping class="es.upm.dit.isst.webLab.dao.model.Gestor" />
+		<mapping class="es.upm.dit.isst.webLab.dao.model.Trabajador" />
 	</session-factory>
 </hibernate-configuration>

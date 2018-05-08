@@ -41,7 +41,7 @@
 <td>${pi.numeroHorasTotales}</td>
 
 <td><c:if test="${pi.status == 2}">
-<%@ include file="Form3RRHH.jsp" %>
+<%@ include file="FormLogin.jsp" %>
 </c:if></td>
 <td>
 <c:if test="${pi.status > 4}">
@@ -49,12 +49,12 @@
 </c:if></td>
 <td>
 <c:if test="${pi.status == 5}">
-<%@ include file="Form3RRHH.jsp" %>
+<%@ include file="FormLogin.jsp" %>
 </c:if>
 </td>
 <td>
 <c:if test="${pi.status == 7}">
-<%@ include file="Form3RRHH.jsp" %>
+<%@ include file="FormLogin.jsp" %>
 </c:if>
 </td>
 
@@ -64,21 +64,21 @@
 </table>
 
 
-<h3>Listado de profes</h3>
+<h3>Listado de trabajadores</h3>
 
 <table border=1>
 <tr>
-<th>Password</th>
-<th>Autor</th>
+<th>Nombre</th>
 <th>Email</th>
+<th>Especialidad</th>
 
 </tr>
 
-<c:forEach items="${professor_list}" var="professori">
+<c:forEach items="${trabajador_list}" var="ti">
 <tr>
-<td>${professori.password}</td>
-<td>${professori.name}</td>
-<td>${professori.email}</td>
+<td>${ti.name}</td>
+<td>${ti.email}</td>
+<td>${ti.especialidad}</td>
 
 </tr>
 </c:forEach>

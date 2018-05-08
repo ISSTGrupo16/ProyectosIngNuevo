@@ -47,22 +47,26 @@
 
 
 
-
+<td>
 <c:if test="${pi.status == 1}">
 <%@ include file="Form2Gestor.jsp" %>
 </c:if></td>
+
 <td><c:if test="${pi.status >= 4}">
 <a href="ServeFileServlet">Descargar memoria</a>
 </c:if></td>
+
 <td>
 <c:if test="${pi.status == 4}">
 <%@ include file="Form2Gestor.jsp" %>
 </c:if></td>
+
 <td><c:if test="${pi.status == 6 }">
 <a href="ServeFileServlet">Descargar memoria</a>
 <%@ include file="Form2Gestor.jsp" %>
 </c:if>
 </td>
+
 </tr>
 </c:forEach>
 

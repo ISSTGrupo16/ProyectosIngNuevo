@@ -13,15 +13,15 @@
 
 <h2>Vista del trabajador</h2>
 
-<p>Nombre: ${tfg.title}</p>
-<p>Email: ${tfg.name}</p>
-<p>Estado: ${tfg.status}</p>
+<p>Nombre: ${proyecto.title}</p>
+<p>Email: ${gestor.name}</p>
+<p>Estado: ${proyecto.status}</p>
 
-<c:if test="${tfg.status == 3}">
+<c:if test="${proyecto.status == 3}">
 <%@ include file="Form1Proyecto.jsp" %>
 </c:if>
 
-<c:if test="${tfg.status >= 4}">
+<c:if test="${proyecto.status}.status >= 4}">
 <a href="ServeFileServlet">Pito</a>
 </c:if>
 

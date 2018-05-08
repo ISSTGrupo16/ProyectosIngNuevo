@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import es.upm.dit.isst.webLab.dao.GestorDAOImplementation;
-import es.upm.dit.isst.webLab.dao.model.Gestor;
+import es.upm.dit.isst.webLab.dao.TrabajadorDAOImplementation;
+import es.upm.dit.isst.webLab.dao.model.Trabajador;
 
-@WebServlet("/FormNuevoGestorServlet")
-public class FormNuevoGestorServlet extends HttpServlet {
+@WebServlet("/FormNuevotrabajadorServlet")
+public class FormNuevoTrabajadorServlet extends HttpServlet {
 	
 	
 	@Override
@@ -23,19 +23,17 @@ public class FormNuevoGestorServlet extends HttpServlet {
 		String email = req.getParameter("email");
 		String name = req.getParameter("name");
 		String password = req.getParameter("password");
+		String especialidad = req.getParameter("especialidad");
 		
-		Gestor gestor = new Gestor();
-		gestor.setName(name);
-		gestor.setEmail(email);
-		gestor.setPassword(password);
+		Trabajador trabajador = new Trabajador();
+		trabajador.setName(name);
+		trabajador.setEmail(email);
+		trabajador.setPassword(password);
+		trabajador.setEspecialidad(especialidad);
 		
-		GestorDAOImplementation.getInstance().createGestor(gestor);
+		TrabajadorDAOImplementation.getInstance().createTrabajador(trabajador);
 
 		resp.sendRedirect(req.getContextPath() + "/LoginRRHH.jsp");
 
-		
 	}
-
-	
-	
 }

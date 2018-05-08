@@ -17,6 +17,7 @@ public interface GestorDAO {
 	public Gestor loginGestor(String email, String password);
 	
 
+	
 }
 
 

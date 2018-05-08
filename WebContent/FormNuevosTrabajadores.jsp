@@ -7,18 +7,22 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
+<h3 name=proyecto>${proyecto} trabajadores</h3>
+
 
 <html>
 
 <h1>Elección de trabajadores</h1>
 
-<c:forEach var="i" begin="0" end="${trabajador_num}" >
+<h3 name=trabajador_num>Ha seleccionado ${trabajador_num} trabajadores</h3>
 
-<h3>Trabajador ${i+1} :
+<c:forEach var="i" begin="1" end="${trabajador_num}" >
 
-<select name="trabajador">
+<h3>Trabajador ${i} :
+
+<select name="trabajador_${i}">
 	<option value="" disabled selected>Elija un trabajador</option>
-	<c:forEach items="${trabajador_list}" var="ti" name=${i}>
+	<c:forEach items="${trabajador_list}" var="ti">
 	<option value=${ti.email}>${ti.name}-${ti.email}</option>
 	</c:forEach>
 </select></h3>
